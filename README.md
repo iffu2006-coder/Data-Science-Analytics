@@ -1,12 +1,12 @@
-## Project 2: Predicting Insurance Claim Amounts
+## Project 3: Customer Churn Prediction
 
 ### Objective
 
-The objective of this project is to predict medical insurance charges based on personal data such as age, BMI, smoking status, gender, region, and number of children.
+The objective of this project is to predict whether a bank customer is likely to leave the bank or not using the Churn Modelling Dataset.
 
 ### Dataset Used
 
-Medical Cost Personal Dataset
+Churn Modelling Dataset
 
 ### Tools and Libraries Used
 
@@ -20,16 +20,18 @@ Medical Cost Personal Dataset
 
 ### Project Description
 
-In this project, I used the Medical Cost Personal Dataset to predict insurance claim amounts. First, I loaded the dataset using pandas and checked its structure using functions such as head, shape, columns, info, and describe. I also checked missing values and duplicate records.
+In this project, I used the Churn Modelling Dataset to predict customer churn. First, I loaded the dataset using pandas and checked its structure using head, shape, columns, info, and describe functions.
 
-After that, I performed data visualization to understand how age, BMI, and smoking status affect insurance charges. I created graphs such as box plot and scatter plots using Matplotlib and Seaborn.
+After that, I checked missing values and duplicate records to make sure the dataset was clean. I also removed unnecessary columns such as RowNumber, CustomerId, and Surname because they were not useful for prediction.
 
-Categorical features such as sex, smoker, and region were converted into numerical form using one-hot encoding. Then, I separated the dataset into features and target variable. The target variable was charges because the aim was to predict insurance charges.
+Then, I performed Exploratory Data Analysis using different graphs. I created visualizations to understand customer churn count, churn by geography, churn by gender, and age distribution of customers.
 
-A Linear Regression model was trained using the training data and tested on the testing data. The model performance was evaluated using MAE, RMSE, and R2 Score.
+Categorical columns such as Geography and Gender were converted into numerical form using one-hot encoding because machine learning models work with numerical data. Then, I separated the dataset into input features and target variable. The target variable was Exited because it shows whether the customer left the bank or not.
+
+A Decision Tree Classifier model was trained using the training data and tested using the testing data. The model performance was evaluated using accuracy, confusion matrix, and classification report.
+
+Feature importance was also analyzed to understand which features had the most effect on customer churn prediction.
 
 ### Conclusion
 
-The project showed that smoking status, age, and BMI are important factors that affect insurance charges. Smokers usually have higher insurance charges compared to non-smokers. The Linear Regression model was able to predict charges and was evaluated using proper regression evaluation metrics.
-
-Ifra Shakir
+This project helped me understand how classification models are used for predicting customer behavior. The analysis showed that customer details such as age, balance, activity status, and other banking features can help predict customer churn. The Decision Tree Classifier was successfully trained and evaluated, and feature importance was used to identify the most important factors affecting churn.
